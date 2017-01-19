@@ -43,7 +43,12 @@ module.exports = function(grunt) {
     },
 
     uglify: {
-
+      my_target: {
+        files: {
+          'public/dist/client.min.js': ['public/dist/client.js'],
+          'public/dist/lib.min.js': ['public/dist/lib.js']
+        }
+      }
     },
 
     eslint: {
@@ -53,6 +58,11 @@ module.exports = function(grunt) {
     },
 
     cssmin: {
+      target: {
+        files: [{
+          'public/dist/style.min.css': ['public/style.css']
+        }]
+      }
     },
 
     watch: {
